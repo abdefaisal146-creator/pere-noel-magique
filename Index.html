@@ -1,0 +1,1012 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071a35">
+<meta name="description" content="Créez une lettre magique et personnalisée du Père Noël pour votre enfant. Un souvenir féerique à imprimer gratuitement.">
+<title>Père Noël Magique — Une lettre inoubliable</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+:root {
+  --navy: #071a35;
+  --navy2: #10294b;
+  --red: #c90c24;
+  --red2: #ed243a;
+  --gold: #edbd59;
+  --cream: #fff9ed;
+  --white: #ffffff;
+  --muted: #b8c7db;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--white);
+  background: var(--navy);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button { cursor: pointer; }
+
+a { color: inherit; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 6%;
+  border-bottom: 1px solid #ffffff20;
+  background: #071a35;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.brand span { color: var(--gold); }
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e7f2;
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 18px;
+  font-weight: 700;
+  transition: transform .2s, opacity .2s;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:focus-visible { outline: 3px solid var(--gold); }
+
+.btn-red {
+  color: white;
+  background: linear-gradient(135deg, var(--red), var(--red2));
+  box-shadow: 0 8px 24px #c90c2430;
+}
+
+.btn-light {
+  color: var(--navy);
+  background: white;
+  border: 1px solid #d8dfeb;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 6% 54px;
+  background:
+    radial-gradient(ellipse at 85% 15%, #9e352e55, transparent 32%),
+    radial-gradient(ellipse at 75% 75%, #d9a74b25, transparent 36%),
+    linear-gradient(125deg, #071a35 25%, #122b4c 70%, #301b32);
+}
+
+.hero:before, .hero:after {
+  content: "✦";
+  position: absolute;
+  color: var(--gold);
+  opacity: .55;
+  font-size: 24px;
+}
+
+.hero:before { top: 32px; right: 12%; }
+.hero:after { top: 48%; right: 4%; }
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr .85fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+h1 {
+  margin: 17px 0;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.08;
+}
+
+h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.hero-copy {
+  max-width: 530px;
+  color: #dce5f1;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 25px;
+  font-size: 12px;
+  color: #e6eaf2;
+}
+
+.hero-points span {
+  border-left: 2px solid var(--gold);
+  padding-left: 9px;
+}
+
+.scene {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #f4d68b66;
+  border-radius: 24px;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 50% 35%, #ffedbb24, transparent 45%),
+    linear-gradient(150deg, #ffffff0d, #071a3570);
+  box-shadow: 0 25px 65px #00000035;
+}
+
+.scene-inner { max-width: 350px; }
+
+.santa-art {
+  font-size: 90px;
+  line-height: 1.4;
+  filter: drop-shadow(0 12px 20px #00000050);
+}
+
+.scene h2 {
+  font-size: 28px;
+  color: var(--gold);
+  margin: 8px 0;
+}
+
+.scene p {
+  color: #e5eaf3;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.form-section {
+  padding: 60px 5%;
+  color: var(--navy);
+  background: linear-gradient(180deg, #eef3fa, #fffaf0);
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 32px;
+}
+
+.section-heading h2 {
+  font-size: clamp(27px, 4vw, 39px);
+  margin: 10px 0;
+}
+
+.section-heading p {
+  color: #59667a;
+  line-height: 1.7;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: start;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e2e7ef;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 12px 40px #122b4c0d;
+  min-width: 0;
+}
+
+.panel h3 {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.subheading {
+  color: #68758a;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 23px;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px 13px;
+}
+
+.field { min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+input, select, textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #ccd5e2;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fbfcfe;
+  color: #102039;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #b58a35;
+  box-shadow: 0 0 0 3px #edbd5930;
+}
+
+textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.hint {
+  margin-top: 5px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #778398;
+}
+
+.form-error {
+  color: #b30920;
+  font-size: 13px;
+  margin: 14px 0 0;
+  line-height: 1.6;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.form-actions .btn { flex: 1; }
+
+.privacy {
+  margin-top: 14px;
+  text-align: center;
+  color: #69778a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.letter-panel {
+  background: #fff;
+  overflow: hidden;
+}
+
+.letter-paper {
+  position: relative;
+  overflow: hidden;
+  min-height: 475px;
+  padding: 27px 25px;
+  color: #392719;
+  border: 1px solid #d9b879;
+  background:
+    radial-gradient(ellipse at 0 0, #efd49a55, transparent 40%),
+    radial-gradient(ellipse at 100% 100%, #e9c77a45, transparent 45%),
+    #fff8e8;
+  box-shadow: inset 0 0 35px #bd93401c;
+}
+
+.letter-paper:before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #d7b77780;
+  pointer-events: none;
+}
+
+.letter-content {
+  position: relative;
+  z-index: 1;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.letter-logo {
+  text-align: center;
+  color: #a50d21;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 7px;
+}
+
+.letter-date {
+  text-align: right;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: #846744;
+  margin-bottom: 20px;
+}
+
+.letter-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.letter-signature {
+  margin-top: 20px;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #a20e20;
+}
+
+.letter-seal {
+  text-align: right;
+  font-size: 28px;
+  margin-top: 8px;
+}
+
+.word-count {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: #66748a;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.feature-section {
+  padding: 58px 5%;
+  background: white;
+  color: var(--navy);
+}
+
+.features {
+  max-width: 1100px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  padding: 24px;
+  border: 1px solid #e6eaf0;
+  border-radius: 17px;
+  background: #fff;
+}
+
+.feature-icon {
+  color: #a77619;
+  font-size: 25px;
+}
+
+.feature h3 { font-size: 20px; }
+
+.feature p {
+  color: #66748a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.steps-section {
+  padding: 55px 5%;
+  text-align: center;
+  background: var(--navy);
+}
+
+.steps-section h2 {
+  color: var(--gold);
+  font-size: 32px;
+}
+
+.steps {
+  max-width: 1000px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step-number {
+  margin: auto;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--navy);
+  background: var(--gold);
+  font-weight: 800;
+}
+
+.steps p {
+  color: #d5deeb;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.final-cta {
+  padding: 45px 5%;
+  text-align: center;
+  background: #fff6e5;
+  color: var(--navy);
+}
+
+.final-cta h2 { font-size: 31px; }
+
+.final-cta p {
+  color: #637086;
+  line-height: 1.7;
+}
+
+footer {
+  padding: 25px 5%;
+  text-align: center;
+  color: #b8c7db;
+  background: #041126;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 800px) {
+  .topbar { padding: 15px 5%; }
+  .nav-links { display: none; }
+  .hero { padding: 43px 5% 35px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 25px; }
+  h1 { font-size: 42px; }
+  .scene { min-height: 230px; padding: 20px; }
+  .santa-art { font-size: 65px; }
+  .workspace { grid-template-columns: 1fr; }
+  .features { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; gap: 10px; }
+  .step { padding: 12px; }
+  .panel { padding: 19px; }
+}
+
+@media (max-width: 390px) {
+  .brand { font-size: 19px; }
+  .topbar > .btn { padding: 10px; font-size: 12px; }
+  h1 { font-size: 35px; }
+  .field-grid { grid-template-columns: 1fr; }
+  .field.full { grid-column: auto; }
+  .letter-paper { padding: 22px 18px; }
+}
+
+@media print {
+  @page { size: A4; margin: 12mm; }
+
+  body { background: white !important; }
+  body * { visibility: hidden !important; }
+
+  #letterPaper, #letterPaper * {
+    visibility: visible !important;
+  }
+
+  #letterPaper {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    border: 1px solid #d9b879 !important;
+    box-shadow: none !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .letter-text { font-size: 13px; line-height: 1.65; }
+  .letter-signature { font-size: 17px; }
+}
+</style>
+</head>
+
+<body>
+<header class="topbar">
+  <a class="brand" href="#" style="text-decoration:none">
+    Père Noël<br><span>Magique</span>
+  </a>
+
+  <nav class="nav-links" aria-label="Navigation">
+    <a href="#accueil">Accueil</a>
+    <a href="#comment">Comment ça marche</a>
+    <a href="#creer">Créer une lettre</a>
+  </nav>
+
+  <a class="btn btn-red" href="#creer" style="text-decoration:none">
+    Créer une lettre
+  </a>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">La magie de Noël, rien que pour lui</div>
+      <h1>Une lettre <em>magique</em> du Père Noël pour votre enfant</h1>
+      <p class="hero-copy">
+        Faites briller ses yeux avec un message personnel,
+        tendre et féerique, créé spécialement pour lui.
+        Un souvenir de Noël à garder précieusement.
+      </p>
+
+      <div class="hero-points">
+        <span>Personnalisée</span>
+        <span>Adaptée à son âge</span>
+        <span>Prête à imprimer</span>
+      </div>
+
+      <p style="margin-top:27px">
+        <a class="btn btn-red" href="#creer" style="text-decoration:none">
+          Créer sa lettre gratuitement
+        </a>
+      </p>
+    </div>
+
+    <div class="scene" aria-label="Ambiance magique de Noël">
+      <div class="scene-inner">
+        <div class="santa-art" aria-hidden="true">🎅</div>
+        <h2>Un souvenir inoubliable</h2>
+        <p>
+          Quelques mots sur votre enfant suffisent
+          pour faire naître un moment de magie.
+        </p>
+        <div style="color:#edbd59;font-size:25px">✦ ✧ ✦</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="creer">
+  <div class="section-heading">
+    <div class="eyebrow" style="color:#a7761a">Votre moment magique commence ici</div>
+    <h2>Créez sa lettre personnalisée</h2>
+    <p>
+      Parlez-nous de votre enfant. Nous préparons une lettre
+      chaleureuse qu'il pourra découvrir à Noël.
+    </p>
+  </div>
+
+  <div class="workspace">
+    <section class="panel">
+      <h3>Les petits détails qui font la magie</h3>
+      <p class="subheading">
+        Complétez les champs ci-dessous pour personnaliser le message.
+        Les informations restent dans cette page.
+      </p>
+
+      <form id="letterForm">
+        <div class="field-grid">
+          <div class="field">
+            <label for="childName">Prénom de l'enfant *</label>
+            <input id="childName" name="childName"
+              placeholder="Ex. : Emma" maxlength="35" required>
+          </div>
+
+          <div class="field">
+            <label for="age">Âge *</label>
+            <select id="age" name="age" required>
+              <option value="">Choisir l'âge</option>
+              <option value="2">2 ans</option>
+              <option value="3">3 ans</option>
+              <option value="4">4 ans</option>
+              <option value="5">5 ans</option>
+              <option value="6">6 ans</option>
+              <option value="7">7 ans</option>
+              <option value="8">8 ans</option>
+              <option value="9">9 ans</option>
+              <option value="10">10 ans</option>
+              <option value="11">11 ans</option>
+              <option value="12">12 ans</option>
+              <option value="13">13 ans</option>
+              <option value="14">14 ans</option>
+              <option value="15">15 ans</option>
+              <option value="16">16 ans</option>
+              <option value="17">17 ans</option>
+              <option value="18">18 ans</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="quality1">Première qualité *</label>
+            <input id="quality1" name="quality1"
+              placeholder="Ex. : gentil" maxlength="35" required>
+          </div>
+
+          <div class="field">
+            <label for="quality2">Deuxième qualité *</label>
+            <input id="quality2" name="quality2"
+              placeholder="Ex. : courageux" maxlength="35" required>
+          </div>
+
+          <div class="field full">
+            <label for="anecdote">Une anecdote personnelle *</label>
+            <textarea id="anecdote" name="anecdote"
+              placeholder="Ex. : Tu as aidé ton petit frère à ranger ses jouets."
+              maxlength="300" required></textarea>
+            <div class="hint">Racontez un petit moment dont votre enfant peut être fier.</div>
+          </div>
+
+          <div class="field full">
+            <label for="gift">Cadeau souhaité *</label>
+            <input id="gift" name="gift"
+              placeholder="Ex. : un vélo rouge" maxlength="80" required>
+          </div>
+        </div>
+
+        <div id="formError" class="form-error" role="alert" hidden></div>
+
+        <div class="form-actions">
+          <button class="btn btn-red" type="submit">
+            Générer ma lettre
+          </button>
+          <button class="btn btn-light" type="reset">
+            Effacer
+          </button>
+        </div>
+
+        <p class="privacy">
+          Vos réponses sont utilisées dans cette page pour créer la lettre.
+          Aucun compte n'est nécessaire.
+        </p>
+      </form>
+    </section>
+
+    <section class="panel letter-panel">
+      <h3>Aperçu de votre lettre</h3>
+      <p class="subheading">
+        Votre lettre apparaîtra ici. Vous pourrez ensuite l'imprimer
+        ou choisir l'enregistrement PDF dans le menu d'impression.
+      </p>
+
+      <article class="letter-paper" id="letterPaper">
+        <div class="letter-content">
+          <div class="letter-logo">Père Noël Magique</div>
+          <div class="letter-date" id="letterDate">Pôle Nord</div>
+          <div class="letter-text" id="letterText">Mon cher enfant,
+
+Au Pôle Nord, les lutins préparent les fêtes et je prends un moment pour penser aux enfants comme toi.
+
+Remplis le formulaire pour découvrir une lettre spécialement préparée pour toi.
+
+Je suis si fier de te voir grandir.
+
+Je ferai de mon mieux pour le cadeau si tu restes sage.
+
+Ho Ho Ho ! Le Père Noël</div>
+          <div class="letter-seal" aria-hidden="true">❄</div>
+        </div>
+      </article>
+
+      <div class="word-count">
+        <span id="wordCount" aria-live="polite">Lettre de démonstration</span>
+        <span>Maximum : 130 mots</span>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-red" type="button" id="printBtn">
+          Imprimer / Enregistrer en PDF
+        </button>
+        <button class="btn btn-light" type="button" id="copyBtn">
+          Copier le texte
+        </button>
+      </div>
+      <p id="actionMessage" class="privacy" role="status"></p>
+    </section>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="section-heading">
+    <div class="eyebrow" style="color:#a7761a">Pensé pour les familles</div>
+    <h2>Une petite attention, un grand souvenir</h2>
+    <p>Une expérience simple pour préparer un Noël plein d'émotion.</p>
+  </div>
+
+  <div class="features">
+    <article class="feature">
+      <div class="feature-icon">✧</div>
+      <h3>Vraiment personnelle</h3>
+      <p>Les qualités, les souvenirs et les souhaits de votre enfant donnent vie à sa lettre.</p>
+    </article>
+    <article class="feature">
+      <div class="feature-icon">♡</div>
+      <h3>Douce et bienveillante</h3>
+      <p>Un message chaleureux qui encourage l'enfant à grandir, apprendre et continuer ses efforts.</p>
+    </article>
+    <article class="feature">
+      <div class="feature-icon">✉</div>
+      <h3>À conserver</h3>
+      <p>Imprimez la lettre pour la glisser dans une enveloppe ou la garder comme souvenir.</p>
+    </article>
+  </div>
+</section>
+
+<section class="steps-section" id="comment">
+  <h2>Comment ça marche ?</h2>
+  <div class="steps">
+    <article class="step">
+      <div class="step-number">1</div>
+      <h3>Parlez-nous de lui</h3>
+      <p>Ajoutez son prénom, son âge, ses qualités et une anecdote.</p>
+    </article>
+    <article class="step">
+      <div class="step-number">2</div>
+      <h3>Découvrez sa lettre</h3>
+      <p>Le texte personnalisé apparaît dans l'aperçu, prêt à être relu.</p>
+    </article>
+    <article class="step">
+      <div class="step-number">3</div>
+      <h3>Gardez la magie</h3>
+      <p>Imprimez la lettre ou enregistrez-la en PDF depuis votre appareil.</p>
+    </article>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Et si cette année, le Père Noël lui écrivait vraiment ?</h2>
+  <p>Créez gratuitement une lettre personnalisée pour votre enfant.</p>
+  <a href="#creer" class="btn btn-red" style="text-decoration:none">
+    Créer sa lettre
+  </a>
+</section>
+</main>
+
+<footer>
+  <div class="brand">Père Noël <span>Magique</span></div>
+  <p>Une lettre imaginée avec tendresse pour faire briller les fêtes.</p>
+  <p>Version de démonstration — aucun paiement n'est activé.</p>
+</footer>
+
+<script>
+"use strict";
+
+const form = document.getElementById("letterForm");
+const letterText = document.getElementById("letterText");
+const letterDate = document.getElementById("letterDate");
+const wordCount = document.getElementById("wordCount");
+const formError = document.getElementById("formError");
+const actionMessage = document.getElementById("actionMessage");
+
+function clean(value) {
+  return value.trim().replace(/\s+/g, " ");
+}
+
+function countWords(text) {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
+function clipWords(text, maxWords) {
+  const words = clean(text).split(/\s+/).filter(Boolean);
+  return words.slice(0, maxWords).join(" ");
+}
+
+function safeText(value, maxWords) {
+  return clipWords(clean(value), maxWords);
+}
+
+function adviceForAge(age) {
+  if (age <= 4) {
+    return "Continue à découvrir le monde, à jouer et à partager de jolis sourires.";
+  }
+
+  if (age <= 7) {
+    return "Continue à apprendre, à écouter les autres et à partager ta joie.";
+  }
+
+  if (age <= 10) {
+    return "Continue tes efforts, aide autour de toi et crois en tes capacités.";
+  }
+
+  if (age <= 13) {
+    return "Continue à être toi-même, à apprendre de tes erreurs et à respecter les autres.";
+  }
+
+  return "Continue à croire en tes projets, à prendre soin des autres et à persévérer.";
+}
+
+function buildLetter(data) {
+  const name = safeText(data.name, 4);
+  const quality1 = safeText(data.quality1, 4);
+  const quality2 = safeText(data.quality2, 4);
+  const anecdote = safeText(data.anecdote, 12);
+  const gift = safeText(data.gift, 6);
+  const advice = adviceForAge(data.age);
+
+  // La limite de mots s'applique au texte entier, signature comprise.
+  // Les champs sont volontairement limités pour préserver les phrases obligatoires.
+  const paragraphs = [
+    `Mon cher ${name},`,
+    `J'ai entendu parler de tes belles qualités : tu es ${quality1} et ${quality2}. Bravo !`,
+    `J'ai aussi appris ceci : ${anecdote}. Tu peux être fier de toi.`,
+    `J'ai bien vu ta liste et ton souhait de recevoir ${gift}.`,
+    `${advice} Je suis si fier de te voir grandir.`,
+    `Je ferai de mon mieux pour le cadeau si tu restes sage.`,
+    `Ho Ho Ho ! Le Père Noël`
+  ];
+
+  let result = paragraphs.join("\n\n");
+
+  // Sécurité : si le texte dépasse la limite, raccourcir l'anecdote.
+  // Les phrases obligatoires et la signature restent intactes.
+  if (countWords(result) > 130) {
+    const fixed = [
+      paragraphs[0],
+      paragraphs[1],
+      "",
+      paragraphs[3],
+      `${advice} Je suis si fier de te voir grandir.`,
+      paragraphs[5],
+      paragraphs[6]
+    ].join("\n\n");
+
+    const available = 130 - countWords(fixed) - 4;
+    const shortAnecdote = safeText(data.anecdote, Math.max(0, available));
+
+    result = [
+      paragraphs[0],
+      paragraphs[1],
+      shortAnecdote ? `Je me souviens aussi de ceci : ${shortAnecdote}.` : "",
+      paragraphs[3],
+      `${advice} Je suis si fier de te voir grandir.`,
+      paragraphs[5],
+      paragraphs[6]
+    ].filter(Boolean).join("\n\n");
+  }
+
+  return result;
+}
+
+function renderLetter() {
+  const data = {
+    name: clean(document.getElementById("childName").value),
+    age: Number(document.getElementById("age").value),
+    quality1: clean(document.getElementById("quality1").value),
+    quality2: clean(document.getElementById("quality2").value),
+    anecdote: clean(document.getElementById("anecdote").value),
+    gift: clean(document.getElementById("gift").value)
+  };
+
+  if (
+    !data.name || !data.age || !data.quality1 ||
+    !data.quality2 || !data.anecdote || !data.gift
+  ) {
+    formError.hidden = false;
+    formError.textContent = "Complétez tous les champs obligatoires pour générer la lettre.";
+    return false;
+  }
+
+  const result = buildLetter(data);
+
+  if (
+    countWords(result) > 130 ||
+    !result.startsWith(`Mon cher ${safeText(data.name, 4)},`) ||
+    !result.includes("Je suis si fier de te voir grandir") ||
+    !result.includes("Je ferai de mon mieux pour le cadeau si tu restes sage") ||
+    !result.endsWith("Ho Ho Ho ! Le Père Noël")
+  ) {
+    formError.hidden = false;
+    formError.textContent = "La lettre n'a pas passé le contrôle. Vérifiez les informations et réessayez.";
+    return false;
+  }
+
+  letterText.textContent = result;
+  letterDate.textContent = "Pôle Nord · " +
+    new Intl.DateTimeFormat("fr-FR", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    }).format(new Date());
+
+  wordCount.textContent = countWords(result) + " / 130 mots";
+  formError.hidden = true;
+  actionMessage.textContent = "Votre lettre a été générée. Relisez-la avant de l'imprimer.";
+  document.getElementById("letterPaper").scrollIntoView({
+    behavior: "smooth",
+    block: "nearest"
+  });
+
+  return true;
+}
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  actionMessage.textContent = "";
+  renderLetter();
+});
+
+form.addEventListener("reset", function() {
+  setTimeout(function() {
+    formError.hidden = true;
+    actionMessage.textContent = "";
+    letterText.textContent =
+      "Mon cher enfant,\n\nRemplis le formulaire pour découvrir ta lettre personnalisée.\n\nJe suis si fier de te voir grandir.\n\nJe ferai de mon mieux pour le cadeau si tu restes sage.\n\nHo Ho Ho ! Le Père Noël";
+    wordCount.textContent = "Lettre de démonstration";
+    letterDate.textContent = "Pôle Nord";
+  }, 0);
+});
+
+document.getElementById("printBtn").addEventListener("click", function() {
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    actionMessage.textContent = "Complétez d'abord le formulaire et générez votre lettre.";
+    return;
+  }
+
+  if (!renderLetter()) return;
+
+  actionMessage.textContent =
+    "Dans la fenêtre d'impression, choisissez « Enregistrer au format PDF » si cette option est disponible.";
+  window.print();
+});
+
+document.getElementById("copyBtn").addEventListener("click", async function() {
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    actionMessage.textContent = "Complétez d'abord le formulaire et générez votre lettre.";
+    return;
+  }
+
+  if (!renderLetter()) return;
+
+  try {
+    await navigator.clipboard.writeText(letterText.textContent);
+    actionMessage.textContent = "Le texte de la lettre a été copié.";
+  } catch (error) {
+    actionMessage.textContent =
+      "La copie automatique n'est pas disponible. Sélectionnez le texte de la lettre pour le copier manuellement.";
+  }
+});
+</script>
+</body>
+</html>
